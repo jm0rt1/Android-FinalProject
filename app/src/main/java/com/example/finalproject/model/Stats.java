@@ -14,6 +14,12 @@ public class Stats {
         return json;
     }
 
+    public static Stats fromJson(String jsonString){
+        Gson gson = new Gson();
+        Stats stats = gson.fromJson(jsonString, Stats.class);
+        return stats;
+    }
+
     public void addCategoryStat(StatItem item){
         mCategoryStats.add(item);
     }

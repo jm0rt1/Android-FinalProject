@@ -60,6 +60,8 @@ public class ExampleUnitTest {
 
         assertEquals("{\"mCategoryStats\":[{\"mCategory\":{\"mId\":1,\"mName\":\"a category\"},\"mAnswered\":2,\"mCorrect\":1,\"mPercentCorrect\":50.0}]}",stats.toJson());
 
+        Stats stats2 = Stats.fromJson("{\"mCategoryStats\":[{\"mCategory\":{\"mId\":1,\"mName\":\"a category\"},\"mAnswered\":2,\"mCorrect\":1,\"mPercentCorrect\":50.0}]}");
+        assertEquals("{\"mCategoryStats\":[{\"mCategory\":{\"mId\":1,\"mName\":\"a category\"},\"mAnswered\":2,\"mCorrect\":1,\"mPercentCorrect\":50.0}]}",stats2.toJson());
 
 
     }
