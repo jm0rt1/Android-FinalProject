@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="trivia_world">Trivia World</string>
+    <string name="new_game">New Game</string>
+    <string name="category">Category:</string>
+    <string name="testing_testing_testing_testing_testing_testing_testing">Testing Testing Testing Testing Testing Testing Testing</string>
+    <string name="_1_10">1/10</string>
+    <string name="easy">Easy</string>
+    <string name="placeholder_question">Some question that has a few incorrect answers and many correct answers. This is a placeholder for that question to see how the text looks in the design???</string>
+</resources>
