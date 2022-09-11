@@ -7,6 +7,7 @@
     tools:context=".NewGameActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler"
         android:layout_width="400dp"
         android:layout_height="632dp"
         app:layout_constraintBottom_toBottomOf="parent"
