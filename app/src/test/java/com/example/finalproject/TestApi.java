@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 import com.example.finalproject.api.ApiCommands;
 import com.example.finalproject.api.ApiInterface;
 import com.example.finalproject.model.Categories;
-import com.example.finalproject.model.Category;
+import com.example.finalproject.model.Categories.Category;
 import com.example.finalproject.model.Questions;
 
 import java.util.ArrayList;

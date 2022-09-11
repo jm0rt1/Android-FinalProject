@@ -1,7 +1,6 @@
 package com.example.finalproject.api;
 
 import com.example.finalproject.model.Categories;
-import com.example.finalproject.model.Category;
 import com.example.finalproject.model.Questions;
 import com.example.finalproject.model.Stats;
 import com.google.gson.Gson;

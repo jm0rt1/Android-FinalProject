@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import com.example.finalproject.model.Category;
+import com.example.finalproject.model.Categories.Category;
 import com.example.finalproject.model.StatItem;
 import com.example.finalproject.model.Stats;
 

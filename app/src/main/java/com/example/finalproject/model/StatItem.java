@@ -1,12 +1,12 @@
 package com.example.finalproject.model;
 
 public class StatItem {
-    Category mCategory;
+    Categories.Category mCategory;
     int mAnswered = 0 ;
     int mCorrect = 0 ;
     double mPercentCorrect = 0.0;
 
-    public StatItem(Category category){
+    public StatItem(Categories.Category category){
         mCategory = category;
     }
     public void addResult(StatItem resultToAdd) throws Exception {
@@ -20,7 +20,7 @@ public class StatItem {
 
     }
 
-    public Category getCategory() {
+    public Categories.Category getCategory() {
         return mCategory;
     }
 
