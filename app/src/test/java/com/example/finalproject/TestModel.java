@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.example.finalproject.model.Categories.Category;
+import com.example.finalproject.model.Model;
 import com.example.finalproject.model.Stats;
 
 /**
@@ -58,5 +59,6 @@ public class TestModel {
 
 
     }
+
 
 }
