@@ -73,4 +73,13 @@ public class Stats {
     public void addCategoryStat(StatItem item){
         mCategoryStats.add(item);
     }
+    public void updateCategoryStat(StatItem item) throws Exception {
+        for(int i =0; i<mCategoryStats.size();i++){
+            if (mCategoryStats.get(i).mCategory.mId == item.mCategory.mId){
+                mCategoryStats.get(i).addResult(item);
+                return;
+            }
+        }
+        addCategoryStat(item);
+    }
 }
