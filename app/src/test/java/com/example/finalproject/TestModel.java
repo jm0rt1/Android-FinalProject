@@ -5,7 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.example.finalproject.model.Categories.Category;
-import com.example.finalproject.model.StatItem;
 import com.example.finalproject.model.Stats;
 
 /**
@@ -18,8 +17,8 @@ public class TestModel {
     @Test
     public void test_adding_results() throws Exception {
         Category c = new Category(1, "a category");
-        StatItem item1 = new StatItem(c);
-        StatItem item2 = new StatItem(c);
+        Stats.StatItem item1 = new Stats.StatItem(c);
+        Stats.StatItem item2 = new Stats.StatItem(c);
         item1.addResult(item2);
 
         assertEquals(item1.getAnswered(),0);
@@ -42,7 +41,7 @@ public class TestModel {
     @Test
     public void test_json_stats() throws Exception {
         Category c = new Category(1, "a category");
-        StatItem item1 = new StatItem(c);
+        Stats.StatItem item1 = new Stats.StatItem(c);
 
         Stats stats = new Stats();
         stats.addCategoryStat(item1);
