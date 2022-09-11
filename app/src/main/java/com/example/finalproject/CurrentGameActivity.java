@@ -10,5 +10,9 @@ public class CurrentGameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_game);
+
+
     }
+
+
 }
