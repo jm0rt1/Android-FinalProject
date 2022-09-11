@@ -2,7 +2,11 @@ package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
+import com.example.finalproject.model.Model;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,5 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Model.getInstance().loadModels();
 
+    }
+
+    public void onClickNewGame(View v){
+        Intent intent = new Intent(getApplicationContext(),NewGameActivity.class);
+        startActivity(intent);
     }
 }
