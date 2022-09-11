@@ -50,12 +50,12 @@ public class TestApi {
             assertEquals(ApiInterface.Questions.Difficulties.EASY, qs.getQuestions().get(i).getDifficulty());
         }
 
-        qs = ApiInterface.Questions.getTenQuestions(11, ApiInterface.Questions.Difficulties.EASY);
+        qs = ApiInterface.Questions.getTenQuestions(11, ApiInterface.Questions.Difficulties.HARD);
         assertEquals(qs.getQuestions().size(), 10);
 
         for (int i =0; i<qs.getQuestions().size(); i++){
-            assertEquals("General Knowledge", qs.getQuestions().get(i).getCategory());
-            assertEquals(ApiInterface.Questions.Difficulties.EASY, qs.getQuestions().get(i).getDifficulty());
+            assertEquals("Entertainment: Film", qs.getQuestions().get(i).getCategory());
+            assertEquals(ApiInterface.Questions.Difficulties.HARD, qs.getQuestions().get(i).getDifficulty());
         }
     }
 }
