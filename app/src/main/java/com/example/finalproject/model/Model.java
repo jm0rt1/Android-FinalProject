@@ -7,6 +7,7 @@ public class Model {
 
     private Categories categories;
     private Stats stats;
+    private Questions currentGame;
 
     public static synchronized Model getInstance() {
         if (instance == null) {
