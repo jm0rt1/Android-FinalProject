@@ -28,17 +28,17 @@ public class ApiCommands {
                 jsonString = getStringFromStream(stream);
             }
             httpConnection.disconnect();
-            Log.d("JSONObject", "Got object!");
+            //Log.d("JSONObject", "Got object!");
         }
         catch (UnknownHostException e1)
         {
             e1.printStackTrace();
-            Log.d("JSONObject", "UnknownHost");
+            //Log.e("JSONObject", "UnknownHost");
         }
         catch (Exception ex)
         {
             ex.printStackTrace();
-            Log.d("JSONObject", "Other exception");
+            //Log.e("JSONObject", "Other exception");
         }
         return jsonString;
     }
