@@ -13,11 +13,8 @@ import com.example.finalproject.model.Stats;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-    }
+public class TestModel {
+
     @Test
     public void test_adding_results() throws Exception {
         Category c = new Category(1, "a category");
@@ -39,9 +36,6 @@ public class ExampleUnitTest {
         assertEquals(4,item1.getAnswered());
         assertEquals(3,item1.getCorrect());
         assertEquals(75,item1.getPercentCorrect(),.01);
-
-
-
 
     }
 
