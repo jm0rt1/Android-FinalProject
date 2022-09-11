@@ -51,6 +51,7 @@ public class GameCategoryRecyclerAdapter extends RecyclerView.Adapter<GameCatego
         holder.difficultySpinner.setAdapter(adapter);
 
         holder.categoryTextView.setText(mCategories.getsCategories().get(position).getmName());
+        holder.category = mCategories.getsCategories().get(position);
 
     }
 

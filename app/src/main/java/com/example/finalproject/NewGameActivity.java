@@ -2,7 +2,10 @@ package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
+import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 
 import android.os.Bundle;
 
@@ -22,8 +25,10 @@ public class NewGameActivity extends AppCompatActivity {
 
         Categories cats = Model.getInstance().getAllCategories();
         mCategoryAdapter = new GameCategoryRecyclerAdapter(this, cats);
-        mCategoryRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mCategoryRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         mCategoryRecycler.setAdapter(mCategoryAdapter);
-        mCategoryRecycler.scrollToPosition(cats.getsCategories().size()-1);
+        mCategoryRecycler.scrollToPosition(0);
+        PagerSnapHelper helper = new PagerSnapHelper();
+        helper.attachToRecyclerView(mCategoryRecycler);
     }
 }

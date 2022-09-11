@@ -11,20 +11,20 @@
     android:layout_marginTop="0dp"
 
     >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/category_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="290dp"
+            android:layout_height="83dp"
             android:layout_marginTop="36dp"
             android:text="@string/testing_testing_testing_testing_testing_testing_testing"
             android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
             android:id="@+id/difficulty_select_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="272dp"
+            android:layout_marginTop="192dp"
             android:text="Select Difficulty"
             android:textAlignment="center"
             android:textSize="18sp"
@@ -47,6 +47,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/difficulty_select_text_view" />
 
@@ -54,13 +55,12 @@
             android:id="@+id/button"
             android:layout_width="199dp"
             android:layout_height="49dp"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="72dp"
             android:text="Play"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/difficulty_spinner"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/difficulty_spinner" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
