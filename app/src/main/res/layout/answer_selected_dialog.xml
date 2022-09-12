@@ -17,6 +17,7 @@
 
         android:textStyle="bold"/>
     <ImageView
+        android:id="@+id/confirm_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"

@@ -52,7 +52,13 @@ public class CurrentGameActivity extends AppCompatActivity {
         answerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
-                AnswerSelectedDialog cdd=new AnswerSelectedDialog(CurrentGameActivity.this);
+                String answer = answerList.get(position);
+                boolean correct = false;
+                if (answer == current.getCorrectAnswer()){
+                    correct = true;
+                }
+                AnswerSelectedDialog cdd=new AnswerSelectedDialog(CurrentGameActivity.this, correct);
+
                 cdd.show();
             }
         });
