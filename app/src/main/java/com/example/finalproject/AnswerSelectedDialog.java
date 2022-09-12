@@ -40,7 +40,7 @@ public class AnswerSelectedDialog extends Dialog implements
         if (mCorrect){
             imageView.setImageResource(R.mipmap.ic_check_mark_round);
         } else {
-            imageView.setImageResource(R.mipmap.ic);
+            imageView.setImageResource(R.mipmap.ic_incorrect_round);
 
         }
 
