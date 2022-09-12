@@ -1,5 +1,7 @@
 package com.example.finalproject;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,8 +52,8 @@ public class CurrentGameActivity extends AppCompatActivity {
         answerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
-                
-
+                AnswerSelectedDialog cdd=new AnswerSelectedDialog(CurrentGameActivity.this);
+                cdd.show();
             }
         });
     }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#3E80B4"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="CORRECT!"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+
+        android:src="@mipmap/ic_check_mark_round"
+        />
+
+    <TextView
+        android:id="@+id/answered_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Answered: "
+        android:textSize="18sp"
+
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/correct_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Correct: "
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
+
+
+
+    <Button
+        android:id="@+id/next_question_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:text="@string/next_question"
+        android:textColor="#5DBCD2"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+
+
+
+</LinearLayout>
