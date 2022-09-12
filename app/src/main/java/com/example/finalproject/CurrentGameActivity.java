@@ -39,7 +39,7 @@ public class CurrentGameActivity extends AppCompatActivity {
 
     }
 
-    private void displayCurrentQuestion(){
+    public void displayCurrentQuestion(){
         Questions.Question current = Model.getInstance().getCurrentGame().getQuestion(currentQuestion);
         categoryTextView.setText(Model.getInstance().getCurrentGame().getCategory().getmName());
         questionTextView.setText(Html.fromHtml(current.getQuestion()).toString());

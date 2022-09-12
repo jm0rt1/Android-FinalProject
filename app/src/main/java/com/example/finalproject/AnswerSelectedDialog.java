@@ -11,11 +11,11 @@ import android.widget.Button;
 public class AnswerSelectedDialog extends Dialog implements
         android.view.View.OnClickListener {
 
-    public Activity c;
+    public CurrentGameActivity c;
     public Dialog d;
-    public Button yes, no;
+    public Button nextQuestionButton;
 
-    public AnswerSelectedDialog(Activity a) {
+    public AnswerSelectedDialog(CurrentGameActivity a) {
         super(a);
         // TODO Auto-generated constructor stub
         this.c = a;
@@ -26,10 +26,9 @@ public class AnswerSelectedDialog extends Dialog implements
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.answer_selected_dialog);
-        yes = (Button) findViewById(R.id.next_question_button);
-        no = (Button) findViewById(R.id.next_question_button);
-        yes.setOnClickListener(this);
-        no.setOnClickListener(this);
+        nextQuestionButton = (Button) findViewById(R.id.next_question_button);
+        nextQuestionButton.setOnClickListener(this);
+
 
     }
 
@@ -37,7 +36,9 @@ public class AnswerSelectedDialog extends Dialog implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.next_question_button:
-//                c.finish();
+                c.currentQuestion++;
+                c.displayCurrentQuestion();
+                dismiss();
                 break;
 
             default:
