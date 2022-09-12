@@ -8,4 +8,6 @@
     <string name="easy">Easy</string>
     <string name="placeholder_question">Some question that has a few incorrect answers and many correct answers. This is a placeholder for that question to see how the text looks in the design???</string>
     <string name="next_question">Next Question</string>
+    <string name="incorrect">Incorrect!</string>
+    <string name="correct">Correct!</string>
 </resources>
