@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.finalproject.model.Stats;
+
 public class AnswerSelectedDialog extends Dialog implements
         android.view.View.OnClickListener {
 
@@ -19,12 +21,15 @@ public class AnswerSelectedDialog extends Dialog implements
     public TextView headerTextView, answeredTextView, correctTextView;
     public ImageView imageView;
     public boolean mCorrect;
+    Stats.StatItem gameStats;
 
-    public AnswerSelectedDialog(CurrentGameActivity a, boolean correct) {
+    public AnswerSelectedDialog(CurrentGameActivity a, boolean correct, Stats.StatItem stats) {
         super(a);
         // TODO Auto-generated constructor stub
         this.c = a;
         mCorrect = correct;
+        gameStats = stats;
+
 
     }
 
@@ -39,14 +44,15 @@ public class AnswerSelectedDialog extends Dialog implements
         nextQuestionButton.setOnClickListener(this);
         imageView = findViewById(R.id.confirm_image);
         headerTextView = findViewById(R.id.header_text_view);
-        answeredTextView = findViewById(R.id.answer_text_view);
+        answeredTextView = findViewById(R.id.answered_text_view);
         correctTextView = findViewById(R.id.correct_text_view);
+
+        correctTextView.setText("Correct: "+ gameStats.getCorrect());
+        answeredTextView.setText("Answered: " + gameStats.getAnswered());
 
         if (mCorrect){
             imageView.setImageResource(R.mipmap.ic_check_mark_round);
             headerTextView.setText(R.string.correct);
-
-
         } else {
             imageView.setImageResource(R.mipmap.ic_incorrect_round);
             headerTextView.setText(R.string.incorrect);

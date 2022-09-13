@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.finalproject.adapters.AnswerListAdapter;
 import com.example.finalproject.model.Model;
 import com.example.finalproject.model.Questions;
+import com.example.finalproject.model.Stats;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,6 +48,8 @@ public class CurrentGameActivity extends AppCompatActivity {
         answerList.addAll(current.getIncorrectAnswers());
         answerList.add(current.getCorrectAnswer());
         Collections.shuffle(answerList);
+        final Stats.StatItem gameStats = Model.getInstance().getCurrentGame().getStatItem();
+
         ArrayAdapter<String> adapter =  new AnswerListAdapter(CurrentGameActivity.this, answerList);
         answerListView.setAdapter(adapter);
         answerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -57,7 +60,8 @@ public class CurrentGameActivity extends AppCompatActivity {
                 if (answer == current.getCorrectAnswer()){
                     correct = true;
                 }
-                AnswerSelectedDialog cdd=new AnswerSelectedDialog(CurrentGameActivity.this, correct);
+                gameStats.addAnswered(correct);
+                AnswerSelectedDialog cdd=new AnswerSelectedDialog(CurrentGameActivity.this, correct, gameStats);
 
                 cdd.show();
             }
