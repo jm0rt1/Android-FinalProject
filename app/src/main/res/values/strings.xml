@@ -10,4 +10,5 @@
     <string name="next_question">Next Question</string>
     <string name="incorrect">Incorrect!</string>
     <string name="correct">Correct!</string>
+    <string name="end_game">End Game</string>
 </resources>

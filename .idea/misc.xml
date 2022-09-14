@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/answer_list_item.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/answer_selected_dialog.xml" value="0.3127456665039063" />
         <entry key="app/src/main/res/layout/game_category_item.xml" value="0.27586206896551724" />
+        <entry key="app/src/main/res/layout/last_answer_dialog.xml" value="0.353713768115942" />
         <entry key="app/src/main/res/layout/stats_item.xml" value="0.2758152173913043" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_check_mark.xml" value="0.177" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_check_mark_round.xml" value="0.18" />

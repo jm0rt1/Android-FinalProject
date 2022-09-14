@@ -1,9 +1,6 @@
 package com.example.finalproject;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -19,10 +16,9 @@ import com.example.finalproject.model.Stats;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class CurrentGameActivity extends AppCompatActivity {
-    int currentQuestion= 0;
+    int currentQuestionNum = 0;
     TextView categoryTextView;
     TextView questionTextView;
     ListView answerListView;
@@ -41,7 +37,7 @@ public class CurrentGameActivity extends AppCompatActivity {
     }
 
     public void displayCurrentQuestion(){
-        Questions.Question current = Model.getInstance().getCurrentGame().getQuestion(currentQuestion);
+        Questions.Question current = Model.getInstance().getCurrentGame().getQuestion(currentQuestionNum);
         categoryTextView.setText(Model.getInstance().getCurrentGame().getCategory().getmName());
         questionTextView.setText(Html.fromHtml(current.getQuestion()).toString());
         ArrayList<String> answerList = new ArrayList<>();
