@@ -1,11 +1,20 @@
 package com.example.finalproject.model;
 
+import android.os.Environment;
+import android.util.Log;
+
 import com.google.gson.Gson;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Stats {
-
+    public final static String STATS_FILE_NAME = "stats.json";
     public static class StatItem {
         Categories.Category mCategory;
         int mAnswered = 0 ;
@@ -73,6 +82,66 @@ public class Stats {
         Stats stats = gson.fromJson(jsonString, Stats.class);
         return stats;
     }
+
+
+    public void save()
+    {
+        try {
+            final File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/folderName/" );
+            if (!dir.exists())
+            {
+                if(!dir.mkdirs()){
+                    Log.e("writing to file","Failed to create the directories");
+                }
+            }
+
+            final File myFile = new File(dir, STATS_FILE_NAME);
+            if (!myFile.exists())
+                myFile.createNewFile();
+
+            FileWriter writer = new FileWriter(myFile);
+            String jsonString = toJson();
+            try{
+                writer.write(jsonString);
+
+            } catch (Exception e){
+                Log.e("writing to file",e.toString());
+            }
+
+            writer.close();
+
+        } catch (IOException e) {
+            Log.e("writing to file",e.toString());
+        }
+    }
+
+    public static Stats load()
+    {
+        final File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/folderName/" );
+        String jsonString;
+        if (!dir.exists())
+        {
+            if(!dir.mkdirs()){
+                Log.e("read file","Failed to create the directories");
+            }
+        }
+
+        final File myFile = new File(dir, STATS_FILE_NAME);
+
+        try{
+            FileInputStream stream = new FileInputStream(myFile);
+            int size = stream.available();
+            byte[] buffer = new byte[size];
+            stream.read(buffer);
+            stream.close();
+            jsonString = new String(buffer, "UTF-8");
+            return fromJson(jsonString);
+        }catch (Exception e){
+            Log.e("writing file",e.toString());
+        }
+        return new Stats();
+    }
+
 
     public void addCategoryStat(StatItem item){
         mCategoryStats.add(item);

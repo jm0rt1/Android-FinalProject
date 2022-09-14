@@ -28,7 +28,7 @@ public class Model {
 
 
 
-    private Stats stats = new Stats();
+    private Stats stats = Stats.load();
 
     public Game getCurrentGame() {
         return currentGame;
