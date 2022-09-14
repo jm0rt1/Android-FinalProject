@@ -15,7 +15,7 @@ public class CategoryStatsViewHolder extends RecyclerView.ViewHolder{
         super(itemView);
 
         categoryTextView = itemView.findViewById(R.id.category_text_view);
-        correctCountTextView= itemView.findViewById(R.id.correct_text_view);
+        correctCountTextView= itemView.findViewById(R.id.correct_count);
         percentCorrectTextView = itemView.findViewById(R.id.percent_correct);
     }
 
