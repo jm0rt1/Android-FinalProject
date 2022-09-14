@@ -3,12 +3,14 @@ package com.example.finalproject;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.finalproject.model.Model;
 import com.example.finalproject.model.Stats;
 
 public class LastAnswerDialog extends Dialog implements
@@ -57,6 +59,11 @@ public class LastAnswerDialog extends Dialog implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.next_question_button:
+                try{
+                    Model.getInstance().getStats().updateCategoryStat(gameStats);
+                }catch (Exception e){
+                    Log.e("Ending Game", e.toString());
+                }
                 Intent intent = new Intent(c.getApplicationContext(),MainActivity.class);
                 c.startActivity(intent);
                 dismiss();

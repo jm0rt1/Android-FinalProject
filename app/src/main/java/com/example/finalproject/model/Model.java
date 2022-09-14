@@ -25,7 +25,10 @@ public class Model {
     }
 
     private Categories allCategories;
-    private Stats stats;
+
+
+
+    private Stats stats = new Stats();
 
     public Game getCurrentGame() {
         return currentGame;
@@ -51,7 +54,9 @@ public class Model {
         sng.execute();
 
     }
-
+    public Stats getStats() {
+        return stats;
+    }
 
 
     final static class DownloadData extends AsyncTask<Void, Integer, Categories> {

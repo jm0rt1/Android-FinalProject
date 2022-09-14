@@ -55,6 +55,10 @@ public class Stats {
 
     }
 
+    public ArrayList<StatItem> getCategoryStats() {
+        return mCategoryStats;
+    }
+
     ArrayList<StatItem> mCategoryStats = new ArrayList<>();
 
 

@@ -34,7 +34,5 @@ public class GameCategoryItemViewHolder extends RecyclerView.ViewHolder{
 
     public void clickPlay(View v){
         Model.getInstance().newGame(category,difficultySpinner.getSelectedItem().toString(), v);
-
-
     }
 }
