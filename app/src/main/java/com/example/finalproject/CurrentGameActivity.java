@@ -55,10 +55,7 @@ public class CurrentGameActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
                 String answer = answerList.get(position);
-                boolean correct = false;
-                if (answer == current.getCorrectAnswer()){
-                    correct = true;
-                }
+                boolean correct = answer.equals(current.getCorrectAnswer());
                 gameStats.addAnswered(correct);
                 AnswerSelectedDialog cdd=new AnswerSelectedDialog(CurrentGameActivity.this, correct, gameStats);
 
