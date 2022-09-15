@@ -26,7 +26,7 @@ public class Stats {
             mCategory = category;
         }
         public void addResult(StatItem resultToAdd) throws Exception {
-            if (mCategory != resultToAdd.mCategory){
+            if (mCategory.mId != resultToAdd.mCategory.mId){
                 throw new Exception("cannot add result to differing categories");
             }
             mAnswered += resultToAdd.mAnswered;
