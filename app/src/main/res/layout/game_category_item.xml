@@ -11,7 +11,7 @@
 
     android:layout_marginBottom="0dp"
     android:layout_marginTop="0dp"
-
+    app:cardBackgroundColor="@color/black"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,8 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/difficulty_select_text_view"
@@ -41,7 +42,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white" />
 
         <Spinner
             android:id="@+id/difficulty_spinner"
@@ -51,7 +53,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/difficulty_select_text_view" />
+            app:layout_constraintTop_toBottomOf="@+id/difficulty_select_text_view"
+            android:textColor="@color/black"
+            android:background="@color/grey"/>
 
         <Button
             android:id="@+id/button"
