@@ -1,5 +1,6 @@
 package com.example.finalproject.model;
 
+import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
@@ -84,15 +85,24 @@ public class Stats {
     }
 
 
-    public void save()
+    public void save(Context context)
     {
         try {
-            final File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/folderName/" );
+            final File dir = new File(context.getFilesDir(),  "folderName" );
             if (!dir.exists())
             {
-                if(!dir.mkdirs()){
-                    Log.e("writing to file","Failed to create the directories");
+                Boolean result = null;
+                try{
+                    result = dir.mkdirs();
+                    Log.i("save", result.toString());
+
+
+                } catch (Exception e){
+                    Log.e("save", e.toString());
+
                 }
+
+
             }
 
             final File myFile = new File(dir, STATS_FILE_NAME);
@@ -115,9 +125,9 @@ public class Stats {
         }
     }
 
-    public static Stats load()
+    public static Stats load(Context context)
     {
-        final File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/folderName/" );
+        final File dir = new File(context.getFilesDir(),  "folderName" );
         String jsonString;
         if (!dir.exists())
         {

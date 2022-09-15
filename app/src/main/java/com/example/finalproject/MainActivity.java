@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Model.getInstance().loadModels();
+        Model.getInstance().loadStats(getApplicationContext());
         Stats stats = Model.getInstance().getStats();
+
         mStatsRecycler = findViewById(R.id.stats_recycler_view);
 
         mStatsRecyclerAdapter = new StatsRecyclerAdapter(this, stats);

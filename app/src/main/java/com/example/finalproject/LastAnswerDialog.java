@@ -61,6 +61,7 @@ public class LastAnswerDialog extends Dialog implements
             case R.id.next_question_button:
                 try{
                     Model.getInstance().getStats().updateCategoryStat(gameStats);
+                    Model.getInstance().getStats().save(getContext());
                 }catch (Exception e){
                     Log.e("Ending Game", e.toString());
                 }
