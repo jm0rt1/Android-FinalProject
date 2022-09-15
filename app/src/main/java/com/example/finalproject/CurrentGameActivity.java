@@ -21,6 +21,7 @@ public class CurrentGameActivity extends AppCompatActivity {
     int currentQuestionNum = 0;
     TextView categoryTextView;
     TextView questionTextView;
+    TextView questionCountTextView;
     ListView answerListView;
 
     @Override
@@ -30,6 +31,7 @@ public class CurrentGameActivity extends AppCompatActivity {
         questionTextView = findViewById(R.id.question_text_view);
         categoryTextView = findViewById(R.id.category_text_view);
         answerListView = findViewById(R.id.answer_list);
+        questionCountTextView = findViewById(R.id.question_counter);
 
 
         displayCurrentQuestion();
@@ -40,6 +42,7 @@ public class CurrentGameActivity extends AppCompatActivity {
         Questions.Question current = Model.getInstance().getCurrentGame().getQuestion(currentQuestionNum);
         categoryTextView.setText(Model.getInstance().getCurrentGame().getCategory().getmName());
         questionTextView.setText(Html.fromHtml(current.getQuestion()).toString());
+        questionCountTextView.setText((currentQuestionNum+1)+"/10");
         ArrayList<String> answerList = new ArrayList<>();
         answerList.addAll(current.getIncorrectAnswers());
         answerList.add(current.getCorrectAnswer());
