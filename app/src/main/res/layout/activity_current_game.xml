@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CurrentGameActivity">
+    tools:context=".CurrentGameActivity"
+    android:background="@mipmap/world">
 
     <TextView
         android:id="@+id/category_text_view"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="24dp"
         android:text="@string/testing_testing_testing_testing_testing_testing_testing"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -26,14 +28,16 @@
         android:layout_marginTop="16dp"
         android:text="@string/easy"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/category_text_view"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/question_counter"
+        android:textColor="@color/white"
         android:layout_width="62dp"
         android:layout_height="28dp"
         android:layout_marginTop="16dp"
@@ -45,6 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/difficulty_text" />
 
     <TextView
+        android:textColor="@color/white"
         android:id="@+id/question_text_view"
         android:layout_width="399dp"
         android:layout_height="167dp"
@@ -52,6 +57,7 @@
         android:isScrollContainer="true"
         android:text="@string/placeholder_question"
         android:textAlignment="center"
+        android:gravity="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,12 +65,12 @@
 
     <ListView
         android:id="@+id/answer_list"
-        android:layout_width="397dp"
-        android:layout_height="291dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="412dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="76dp"
         android:isScrollContainer="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_text_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
