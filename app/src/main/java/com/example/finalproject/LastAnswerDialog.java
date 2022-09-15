@@ -40,7 +40,7 @@ public class LastAnswerDialog extends Dialog implements
         setContentView(R.layout.last_answer_dialog);
 
 
-        nextQuestionButton = (Button) findViewById(R.id.next_question_button);
+        nextQuestionButton = (Button) findViewById(R.id.end_button);
         nextQuestionButton.setOnClickListener(this);
         imageView = findViewById(R.id.confirm_image);
         headerTextView = findViewById(R.id.header_text_view);
@@ -48,7 +48,7 @@ public class LastAnswerDialog extends Dialog implements
         countTextView = findViewById(R.id.count_text_view);
 
         countTextView.setText("Correct: "+ gameStats.getCorrect() + "/" + gameStats.getAnswered());
-        percentTextView.setText("Accuracy: " + gameStats.getPercentCorrect());
+        percentTextView.setText("Accuracy: " + gameStats.getPercentCorrect()+ "%");
         if (c.currentQuestionNum == 9){
             nextQuestionButton.setText(R.string.end_game);
         }
@@ -58,7 +58,7 @@ public class LastAnswerDialog extends Dialog implements
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.next_question_button:
+            case R.id.end_button:
                 try{
                     Model.getInstance().getStats().updateCategoryStat(gameStats);
                     Model.getInstance().getStats().save(getContext());

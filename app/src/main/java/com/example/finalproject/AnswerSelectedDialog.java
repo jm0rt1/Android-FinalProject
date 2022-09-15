@@ -39,7 +39,7 @@ public class AnswerSelectedDialog extends Dialog implements
         setContentView(R.layout.answer_selected_dialog);
 
 
-        nextQuestionButton = (Button) findViewById(R.id.next_question_button);
+        nextQuestionButton = (Button) findViewById(R.id.end_button);
         nextQuestionButton.setOnClickListener(this);
         imageView = findViewById(R.id.confirm_image);
         headerTextView = findViewById(R.id.header_text_view);
@@ -65,18 +65,17 @@ public class AnswerSelectedDialog extends Dialog implements
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.next_question_button:
+            case R.id.end_button:
                 if (c.currentQuestionNum ==9){
                     LastAnswerDialog cdd = new LastAnswerDialog(c, gameStats);
                     cdd.show();
-                    dismiss();
 
                 } else {
                     c.currentQuestionNum++;
                     c.displayCurrentQuestion();
-                    dismiss();
 
                 }
+                dismiss();
 
                 break;
 
